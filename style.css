@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #18191A;
+}
+.drop-down-menu{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+nav .drop-btn{
+    width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #242526;
+    color: #b0b3b8;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav .drop-btn span{
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+nav .wrapper{
+    position: absolute;
+    top:55px;
+    display: flex;
+    width: 400px;
+    background-color: #242526;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+nav .wrapper.show{
+    display: block;
+    display: flex;
+}
+nav .wrapper .setting-drop,
+nav .wrapper .help-drop{
+    display: none;
+}
+nav .wrapper ul{
+    list-style: none;
+    width: 400px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+nav .wrapper ul li{
+    line-height: 55px;
+}
+nav .wrapper ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #b0b3b8;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.6s;
+}
+nav .wrapper ul li:hover a{
+    background: #3A3B3C;
+}
+.wrapper ul li a .icon{
+    background-color: #616263;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.wrapper ul li a i{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    pointer-events: none;
+}
+.wrapper .setting-drop .arrow{
+    padding-left: 10px;
+    font-size: 20px;
+    color: #b0b3b8;
+    font-weight: 500;
+    cursor: pointer;
+}
+.wrapper .setting-drop .arrow span{
+    margin-right: 15px;
+}
+.wrapper .help-drop .arrow{
+    padding-left: 10px;
+    font-size: 20px;
+    color: #b0b3b8;
+    font-weight: 500;
+    cursor: pointer;
+}
+.wrapper .help-drop .arrow span{
+    margin-right: 15px;
+}
+
+
+@media (max-width:450px){
+    nav .drop-down-menu{
+        top: 10%;
+    }
+    nav .drop-btn{
+        font-size: 15px;
+        width: 250px;
+        font-weight: 900;
+    }
+    nav .drop-btn span{
+        font-size: 20px;
+    }
+    nav .wrapper{
+        width: 250px;
+    }
+    nav .wrapper ul li a{
+        font-size: 15px;
+    }
+    .wrapper ul li a .icon{
+        height: 25px;
+        width: 25px;
+        margin-right: 5px;
+    }
+    .wrapper ul li a i{
+        right: 3px;
+        font-size: 15px;
+    }
+    .wrapper .setting-drop,
+    .wrapper .help-drop{
+        width: 250px;
+    }
+    .wrapper .setting-drop .arrow{
+        padding-left: 7px;
+        font-size: 18px;
+    }
+    .wrapper .setting-drop .arrow span{
+        margin-right: 15px;
+    }
+    .wrapper .help-drop .arrow{
+        font-size: 18px;
+    }
+    .wrapper .setting-drop li a{
+        font-size: 16px;
+    }
+    .wrapper .help-drop li a{
+        font-size: 12px;
+    }
+        
+}

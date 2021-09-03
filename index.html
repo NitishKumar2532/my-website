@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Drop-Down Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="drop-down-menu">
+            <div class="drop-btn">
+                Nitish Kumar Paidi <span class="fas fa-caret-down"></span>
+            </div>
+            <div class="wrapper">
+                <ul class="menu-bar">
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-home"></span></div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="setting-item">
+                        <a href="#" class="sp">
+                            <div class="icon"><span class="fas fa-cog"></span></div>
+                            settings & privacy <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="help-item">
+                        <a href="#" class="hs">
+                            <div class="icon"><span class="fas fa-question-circle"></span></div>
+                            Help & support <i class="fa fa-angle-right" ></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-user"></span></div>
+                            About us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-comment-alt"></span></div>
+                            Feedback
+                        </a>
+                    </li>
+                </ul>
+    
+                <!--Settings & privacy Menu-items-->
+    
+                <ul class="setting-drop">
+                    <li class="arrow back-setting-btn"><span class="fas fa-arrow-left"></span>Settings & privacy</li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-user"></span></div>
+                            Personal info
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-address-book"></span></div>
+                            Activity log
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-project-diagram"></span></div>
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-globe-asia"></span></div>
+                            languages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-lock"></span></div>
+                            Change password
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-sign-out-alt"></span></div>
+                            Log out
+                        </a>
+                    </li>
+                </ul>
+    
+                <!--Help & support Menu-items-->
+    
+                <ul class="help-drop">
+                    <li class="arrow back-help-btn"><span class="fas fa-arrow-left"></span>Help & support</li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-question-circle"></span></div>
+                            Tell, how to became a developer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-comment-alt"></span></div>
+                            Send feedback
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-exclamation-circle"></span></div>
+                            Facing problems
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon"><span class="fas fa-envelope"></span></div>
+                            Support
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        const drop_btn = document.querySelector(".drop-btn");
+        const menu_wrapper = document.querySelector(".wrapper");
+        const menu_bar = document.querySelector(".menu-bar");
+        const setting_drop = document.querySelector(".setting-drop");
+        const help_drop = document.querySelector(".help-drop");
+        const setting_item = document.querySelector(".setting-item");
+        const help_item = document.querySelector(".help-item");
+        const back_setting_item = document.querySelector(".back-setting-btn");
+        const back_help_item = document.querySelector(".back-help-btn");
+        drop_btn.onclick = function(){
+            menu_wrapper.classList.toggle("show");
+        }
+        setting_item.onclick = (()=>{
+            menu_bar.style.marginLeft = "-400px";
+            setTimeout(()=>{
+                setting_drop.style.display = "block";
+            }, 100);
+        });
+        help_item.onclick = (()=>{
+            menu_bar.style.marginLeft = "-400px";
+            setTimeout(()=>{
+                help_drop.style.display = "block";
+            }, 100);
+            
+        });
+        back_setting_item.onclick = (()=>{
+            menu_bar.style.marginLeft = "0px";
+            setTimeout(()=>{
+                setting_drop.style.display = "none";
+            }, 100);
+            
+        });
+        back_help_item.onclick = (()=>{
+            menu_bar.style.marginLeft = "0px";
+            setTimeout(()=>{
+                help_drop.style.display = "none";
+            }, 100);
+            
+        });
+    </script>
+</body>
+</html>
